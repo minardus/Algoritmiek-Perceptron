@@ -80,8 +80,6 @@ public class Perceptron {
             int j;
             for(j = 0; j < 4; j++) {
                 result += weights[a][j] * x[j];
-            }
-            for(j = 0; j < 4; j++) {
                 double error = expected[j] - unit_step(result);
                 weights[a][j] += learningRate * error * x[j];
             }

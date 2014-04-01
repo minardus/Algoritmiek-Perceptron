@@ -67,7 +67,7 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="41" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+            <state line="5" column="41" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="272">
               <folding />
             </state>
           </provider>
@@ -76,7 +76,7 @@
       <file leaf-file-name="Perceptron.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Perceptron.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="60" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.3576052" vertical-offset="1224" max-vertical-offset="1921">
+            <state line="84" column="13" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.7669903" vertical-offset="954" max-vertical-offset="1887">
               <folding />
             </state>
           </provider>
@@ -85,7 +85,7 @@
       <file leaf-file-name="Formatter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/util/Formatter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2486" column="0" selection-start="102914" selection-end="102914" vertical-scroll-proportion="0.0" vertical-offset="41206" max-vertical-offset="74749">
+            <state line="2486" column="0" selection-start="102914" selection-end="102914" vertical-scroll-proportion="0.0" vertical-offset="42262" max-vertical-offset="75599">
               <folding />
             </state>
           </provider>
@@ -124,7 +124,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
-    <option name="STATE" value="2" />
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
@@ -139,6 +139,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -147,33 +148,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Perceptron" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Perceptron" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Perceptron" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Perceptron" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -338,7 +314,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1634" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -387,6 +363,27 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="41" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="272">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Perceptron.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="60" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_45/src.zip!/java/util/Formatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2486" column="0" selection-start="102914" selection-end="102914" vertical-scroll-proportion="0.0" vertical-offset="42262" max-vertical-offset="75599">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="41" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="272">
@@ -445,7 +442,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Perceptron.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="60" selection-start="2393" selection-end="2393" vertical-scroll-proportion="0.3576052" vertical-offset="1224" max-vertical-offset="1921">
+        <state line="84" column="13" selection-start="2357" selection-end="2357" vertical-scroll-proportion="0.7669903" vertical-offset="954" max-vertical-offset="1887">
           <folding />
         </state>
       </provider>
