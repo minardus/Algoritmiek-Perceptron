@@ -5,7 +5,7 @@ import java.util.Random;
  */
 public class Perceptron {
 
-    private int[][][] iMatrix = {
+    public int[][][] iMatrix = {
             {
                     {1, 0, 0, 0},
                     {0, 0, 0, 0},
@@ -40,7 +40,7 @@ public class Perceptron {
             }
     };
 
-    private int[][] cMatrix = {
+    public int[][] cMatrix = {
             {0, 1, 1, 0},
             {1, 0, 0, 1},
             {0, 0, 0, 1},
@@ -50,54 +50,64 @@ public class Perceptron {
     };
 
     private double[][] weights;
-    private double learningRate = 0.2;
+    private double learningRate = 0.01f;
     private int learningIterations = 100;
 
     public Perceptron() {
         initWeights();
-        train();
+    }
+
+    /* initialize weights random between 0 and 1, seems to be good practice */
+    private void initWeights() {
+        weights = new double[6][4];
+        for(int i = 0; i < 6; i++)
+            for(int j = 0; j < 4; j++)
+                weights[i][j] = 0;
+    }
+
+    /*
+    private int sign(int[][] matrix, int i, int j) {
+        return (matrix[i][j] * weights[i][j]) > 0 ? 1 : 0;
+    }
+    */
+
+    private int sign(int[][] matrix) {
+        double y = 0.0;
+        for(int i = 0; i < 6; i++) {
+            for(int j = 0; j < 4; j++) {
+                y += matrix[i][j] * weights[i][j];
+            }
+        }
+        y--;
+        System.out.println("sum: " + y);
+        return y > 0 ? 1 : 0;
+    }
+
+    public void train(int[][] matrix, boolean type) {
+        int expected = type ? 2 : 0;
+        int counter = 0;
+        for(int h = 0; h < learningIterations; h++) {
+            int signed = sign(matrix);
+            if(expected-1 == signed)
+                break;
+            for(int i = 0; i < 6; i++) {
+                for(int j = 0; j < 4; j++) {
+                    int x = matrix[i][j];
+                    int error = expected - signed;
+                    System.out.println("error: " + error + "\tsigned: " + signed);
+                    weights[i][j] += learningRate * error * x;
+                }
+            }
+            counter++;
+        }
+        System.out.println("counter: " + counter);
         print();
     }
 
-    private void initWeights() {
-        weights = new double[6][4];
+    private void print() {
         for(int i = 0; i < 6; i++) {
             for(int j = 0; j < 4; j++) {
-                weights[i][j] = Math.random();
-                //System.out.println(String.format("w[%d][%d] == %f", i, j, weights[i][j]));
-            }
-        }
-    }
-
-    private void train() {
-        for(int i = 0; i < learningIterations; i++) {
-            int a = new Random().nextInt(iMatrix.length);
-            int b = new Random().nextInt(iMatrix[0].length);
-            int[] x = iMatrix[a][b];
-            int[] expected = cMatrix[b];
-            double result = 0;
-            // dot
-            int j;
-            for(j = 0; j < 4; j++) {
-                result += weights[a][j] * x[j];
-                double error = expected[j] - unit_step(result);
-                weights[a][j] += learningRate * error * x[j];
-            }
-        }
-    }
-
-    private int unit_step(double n) {
-        return n > 0 ? 1 : 0;
-    }
-
-    private void print() {
-        for(int i = 0; i < 4; i++) {
-            for(int j = 0; j < 6; j++) {
-                for(int k = 0; k < 4; k++) {
-                    String output = String.format("[%d %d %d %d]: %f -> %d", iMatrix[i][j][0], iMatrix[i][j][1],
-                            iMatrix[i][j][2], iMatrix[i][j][3], weights[j][k], cMatrix[j][k]);
-                    System.out.println(output);
-                }
+                System.out.print(String.format("%.2f " + (j == 3 ? "\n" : " "), weights[i][j]));
             }
         }
     }
